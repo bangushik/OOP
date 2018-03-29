@@ -17,4 +17,5 @@ matrix* matrix::inMatrix(ifstream &ifst)
 	}
 	matr->In(ifst);
 	return matr;
+	
 };

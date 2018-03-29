@@ -8,5 +8,6 @@ class matrixDiag :public matrix
 public:
 	void In(ifstream &ifst);
 	void MatrixOut(ofstream & ofst);
+	void matrixDiag :: MatrixSum(ofstream &ofstint);
 };
 #pragma once

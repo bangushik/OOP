@@ -18,4 +18,12 @@ void matrixDiag::MatrixOut(ofstream &ofst)
 		ofst << Diagmatr[i] << " ";
 	}
 	ofst << endl;
+};
+void matrixDiag::MatrixSum(ofstream &ofst)
+{
+	for (int i = 0; i < size; i++)
+	{
+		sum = sum + Diagmatr[i];
+	}
+	ofst <<"Summa: "<< sum;
 }

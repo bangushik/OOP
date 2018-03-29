@@ -23,4 +23,6 @@ public:
 	void dell();
 	void ViewCont(ofstream &ofst);
 
+	
+
 };

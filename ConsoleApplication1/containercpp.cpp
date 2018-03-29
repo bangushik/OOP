@@ -86,9 +86,15 @@ void container::ViewCont(ofstream &ofst)
 	while (n->next != head)
 	{
 		n->info->MatrixOut(ofst);
+		ofst << endl;
+		n->info->MatrixSum(ofst);
+		ofst << endl;
 		n = n->next;
 	}
 	
 	n->info->MatrixOut(ofst);
+	ofst << endl;
+	n->info->MatrixSum(ofst);
 	
 };
+

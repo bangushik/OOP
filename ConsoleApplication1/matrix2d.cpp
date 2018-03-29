@@ -27,4 +27,15 @@ void matrix2d::MatrixOut(ofstream &ofst)
 		}
 		ofst << endl;
 	}
+};
+void matrix2d::MatrixSum(ofstream &ofst)
+{
+	for (int i = 0; i < strings; i++)
+	{
+		for (int j = 0; j < collums; j++)
+		{
+			sum = sum + matr[i][j];
+		}
+	}
+	ofst <<"Summa: "<< sum;
 }
