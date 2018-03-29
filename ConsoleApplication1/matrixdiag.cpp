@@ -18,4 +18,8 @@ void matrixDiag::MatrixOut(ofstream &ofst)
 		ofst << Diagmatr[i] << " ";
 	}
 	ofst << endl;
-}
+};
+void matrixDiag::MatrixOutDiag(ofstream & ofst)
+{
+	MatrixOut(ofst);
+};

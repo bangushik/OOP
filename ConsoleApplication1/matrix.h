@@ -10,4 +10,6 @@ public:
 	static matrix* inMatrix(ifstream &ifst);
 	virtual void In(ifstream &ifst) = 0;
 	virtual void MatrixOut(ofstream & ofst) = 0;
+	virtual void MatrixOutDiag(ofstream & ofst);
+	virtual void MatrixOut2D(ofstream & ofst);
 };

@@ -27,4 +27,8 @@ void matrix2d::MatrixOut(ofstream &ofst)
 		}
 		ofst << endl;
 	}
-}
+};
+void matrix2d::MatrixOut2D(ofstream & ofst)
+{
+	MatrixOut(ofst);
+};

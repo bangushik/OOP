@@ -10,4 +10,5 @@ class matrix2d:public matrix
 public:
 	 void In(ifstream &ifst);
 	 void MatrixOut(ofstream & ofst);
+	 void matrix2d::MatrixOut2D(ofstream & ofst);
 };

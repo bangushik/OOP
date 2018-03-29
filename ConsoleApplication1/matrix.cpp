@@ -17,4 +17,13 @@ matrix* matrix::inMatrix(ifstream &ifst)
 	}
 	matr->In(ifst);
 	return matr;
+	
+};
+void matrix::MatrixOutDiag(ofstream & ofst)
+{
+
+};
+void matrix::MatrixOut2D(ofstream & ofst)
+{
+
 };

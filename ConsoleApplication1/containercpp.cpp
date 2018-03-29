@@ -92,3 +92,28 @@ void container::ViewCont(ofstream &ofst)
 	n->info->MatrixOut(ofst);
 	
 };
+void container::ViewFiltred(ofstream &ofst, int param)
+{
+	node* n = head;
+
+	if (n == NULL)
+	{
+		ofst << "Контейнер пуст" << endl;
+		return;
+	}
+	ofst << "В контйнере " << size << " эл. " << endl;
+	while (n->next != head)
+	{
+		if (param == 1)
+			n->info->MatrixOutDiag(ofst);
+		if (param == 2)
+			n->info->MatrixOut2D(ofst);
+		n = n->next;
+		
+	}
+	if (param == 1)
+		n->info->MatrixOutDiag(ofst);
+	if (param == 2)
+		n->info->MatrixOut2D(ofst);
+
+}

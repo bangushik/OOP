@@ -8,5 +8,6 @@ class matrixDiag :public matrix
 public:
 	void In(ifstream &ifst);
 	void MatrixOut(ofstream & ofst);
+	void MatrixOutDiag(ofstream &ofst);
 };
 #pragma once

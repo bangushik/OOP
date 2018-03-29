@@ -22,5 +22,6 @@ public:
 	void push(matrix* info);
 	void dell();
 	void ViewCont(ofstream &ofst);
+	void ViewFiltred(ofstream &ofst, int param);
 
 };
