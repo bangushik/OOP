@@ -19,3 +19,14 @@ matrix* matrix::inMatrix(ifstream &ifst)
 	return matr;
 	
 };
+ bool matrix::Compare(matrix* m1, matrix* m2, int param)
+{
+	if (param == 1)
+	{
+		return (m1->sum > m2->sum);
+	}
+	if (param == 2)
+	{
+		return (m1->sum < m2->sum);
+	}
+}

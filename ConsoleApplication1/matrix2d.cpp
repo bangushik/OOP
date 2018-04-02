@@ -30,6 +30,7 @@ void matrix2d::MatrixOut(ofstream &ofst)
 };
 void matrix2d::MatrixSum(ofstream &ofst)
 {
+	sum = 0;
 	for (int i = 0; i < strings; i++)
 	{
 		for (int j = 0; j < collums; j++)
@@ -38,4 +39,5 @@ void matrix2d::MatrixSum(ofstream &ofst)
 		}
 	}
 	ofst <<"Summa: "<< sum;
+	
 }

@@ -26,4 +26,5 @@ void matrixDiag::MatrixSum(ofstream &ofst)
 		sum = sum + Diagmatr[i];
 	}
 	ofst <<"Summa: "<< sum;
+	
 }
