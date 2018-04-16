@@ -86,9 +86,65 @@ void container::ViewCont(ofstream &ofst)
 	while (n->next != head)
 	{
 		n->info->MatrixOut(ofst);
+		ofst << endl;
+		n->info->MatrixSum(ofst);
+		ofst << endl;
 		n = n->next;
 	}
 	
 	n->info->MatrixOut(ofst);
+	ofst << endl;
+	n->info->MatrixSum(ofst);
 	
 };
+void container::ContainerSort(int param)
+{
+	node *cur;
+	node *next;
+	matrix* temp;
+	matrix* matr;
+	bool isSorted;
+	
+	do
+	{
+		isSorted = true;
+		cur = head;
+		while (cur->next != head)
+		{
+			next = cur->next;
+			if (cur->info->Compare(cur->info, next->info,param))
+			{
+				temp = cur->info;
+				cur->info = next->info;
+				next->info = temp;
+				isSorted = false;
+			}
+			cur = cur->next;
+		}
+	} while (!isSorted);
+};
+void container::ViewContSort(ofstream &ofst)
+{
+	node* n = head;
+
+	if (n == NULL)
+	{
+		ofst << "Контейнер пуст" << endl;
+		return;
+	}
+	ofst << endl;
+	ofst << "В контйнере " << size << " эл. " << endl;
+	while (n->next != head)
+	{
+		n->info->MatrixOut(ofst);
+		ofst << endl;
+		ofst << "Summa: " << n->info->sum;
+		ofst << endl;
+		n = n->next;
+	}
+
+	n->info->MatrixOut(ofst);
+	ofst << endl;
+	ofst << "Summa: " << n->info->sum;
+}
+

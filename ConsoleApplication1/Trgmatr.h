@@ -8,5 +8,6 @@ class matrixTRG :public matrix
 public:
 	void In(ifstream &ifst);
 	void MatrixOut(ofstream &ofst);
+	void matrixTRG::MatrixSum(ofstream &ofst);
 };
 #pragma once

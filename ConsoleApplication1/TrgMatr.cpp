@@ -51,3 +51,12 @@ void matrixTRG::MatrixOut(ofstream &ofst)
 	ofst << endl;
 
 };
+void matrixTRG::MatrixSum(ofstream &ofst)
+{
+	for (int i = 0; i < size; i++)
+	{
+		sum = sum + trg[i];
+	}
+	ofst << "Summa: " << sum;
+
+}

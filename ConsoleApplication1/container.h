@@ -9,6 +9,7 @@ class node
 	node* next;
 	node*  prev;
 	matrix* info;
+	bool issorted;
 };
 class container
 {
@@ -21,6 +22,11 @@ public:
 	void Clear ();
 	void push(matrix* info);
 	void dell();
+	void ViewContSort(ofstream &ofst);
 	void ViewCont(ofstream &ofst);
+	void ContainerSort(int param);
+	
+
+	
 
 };
