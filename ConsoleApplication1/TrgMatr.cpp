@@ -27,8 +27,87 @@ void matrixTRG::In(ifstream &ifst)
 
 void matrixTRG::MatrixOut(ofstream &ofst)
 {
-	ofst << "Это треугольная матрица: ";
-	ofst << "размер " << size <<  " " << "X "<< size << endl;
+	if (printtype == STRING)
+	{
+		ofst << "Это треугольная матрица: ";
+		ofst << "размер " << size << " " << "X " << size << endl;
+		int k = 0;
+		for (int i = 0; i < size; i++)
+		{
+			for (int j = 0; j < size; j++)
+			{
+				if (j >= i)
+				{
+					ofst << trg[k] << " ";
+
+
+				}
+				else
+				{
+					ofst << "0" << " ";
+				}
+				k++;
+			}
+			ofst << endl;
+		}
+		ofst << endl;
+	}
+		if (printtype == STOLB)
+		{
+			ofst << "Это треугольная матрица: ";
+			ofst << "размер " << size << " " << "X " << size << endl;
+			int k = 0;
+			for (int i = 0; i < size; i++)
+			{
+				for (int j = 0; j < size; j++)
+				{
+					if (j < i)
+					{
+						ofst << trg[k] << " ";
+
+
+					}
+					else
+					{
+						ofst << "0" << " ";
+					}
+					k++;
+				}
+				ofst << endl;
+			}
+			ofst << endl;
+		}
+		if (printtype == STRING)
+		{
+			ofst << "Это треугольная матрица: ";
+			ofst << "размер " << size << " " << "X " << size << endl;
+			int k = 0;
+			for (int i = 0; i < size; i++)
+			{
+				for (int j = 0; j < size; j++)
+				{
+					if (j >= i)
+					{
+						ofst << trg[k] << " ";
+
+
+					}
+					else
+					{
+						ofst << "0" << " ";
+					}
+					k++;
+				}
+				
+			}
+			ofst << endl;
+		}
+	
+
+};
+void matrixTRG::MatrixSum(ofstream &ofst)
+{
+	sum = 0;
 	int k = 0;
 	for (int i = 0; i < size; i++)
 	{
@@ -36,27 +115,17 @@ void matrixTRG::MatrixOut(ofstream &ofst)
 		{
 			if (j >= i)
 			{
-				ofst << trg[k] << " ";
+				sum = sum + trg[k];
 
 
 			}
 			else
 			{
-				ofst << "0" << " ";
+				
 			}
 			k++;
 		}
-		ofst << endl;
-	}
-	ofst << endl;
-
-};
-void matrixTRG::MatrixSum(ofstream &ofst)
-{
-	for (int i = 0; i < size; i++)
-	{
-		sum = sum + trg[i];
 	}
 	ofst << "Summa: " << sum;
 
-}
+};
