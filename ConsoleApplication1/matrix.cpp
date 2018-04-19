@@ -49,3 +49,15 @@ matrix* matrix::inMatrix(ifstream &ifst)
 		return (m1->sum < m2->sum);
 	}
 }
+void matrix::MatrixOutDiag(ofstream & ofst)
+{
+
+};
+void matrix::MatrixOut2D(ofstream & ofst)
+{
+
+};
+void matrix::MatrixOutTrg(ofstream &ofst)
+{
+
+}

@@ -133,7 +133,7 @@ void container::ViewContSort(ofstream &ofst)
 		return;
 	}
 	ofst << endl;
-	ofst << "В контйнере " << size << " эл. " << endl;
+	ofst << "В контейнере " << size << " эл-ов " << endl;
 	while (n->next != head)
 	{
 		n->info->MatrixOut(ofst);
@@ -146,5 +146,68 @@ void container::ViewContSort(ofstream &ofst)
 	n->info->MatrixOut(ofst);
 	ofst << endl;
 	ofst << "Summa: " << n->info->sum;
+	ofst << endl;
+}
+void container::ViewFiltred(ofstream &ofst, int met)
+{
+	node* n = head;
+
+	if (n == NULL)
+	{
+		ofst << "Контейнер пуст" << endl;
+		return;
+	}
+
+	ofst << "В контйнере " << size << " эл. " << endl;
+	while (n->next != head)
+	{
+		if (met == 1)
+		{
+			n->info->MatrixOutDiag(ofst);
+			ofst << endl;
+			ofst << "Summa: " << n->info->sum;
+			ofst << endl;
+			n = n->next;
+		}
+		if (met == 2)
+		{
+			n->info->MatrixOut2D(ofst);
+			ofst << endl;
+			ofst << "Summa: " << n->info->sum;
+			ofst << endl;
+			n = n->next;
+		}
+		if (met == 3)
+		{
+			n->info->MatrixOutTrg(ofst);
+			ofst << endl;
+			ofst << "Summa: " << n->info->sum;
+			ofst << endl;
+			n = n->next;
+		}
+
+	}
+	if (met == 1)
+		n->info->MatrixOutDiag(ofst);
+	{
+		ofst << endl;
+		ofst << "Summa: " << n->info->sum;
+		ofst << endl;
+	}
+	if (met == 2)
+	{
+		n->info->MatrixOut2D(ofst);
+		ofst << endl;
+		ofst << "Summa: " << n->info->sum;
+		ofst << endl;
+	}
+	if (met == 3)
+	{
+	n->info->MatrixOutTrg(ofst);
+	ofst << endl;
+	ofst << "Summa: " << n->info->sum;
+	ofst << endl;
+}
+
 }
 

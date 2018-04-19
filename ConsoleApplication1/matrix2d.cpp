@@ -68,4 +68,9 @@ void matrix2d::MatrixSum(ofstream &ofst)
 	}
 	ofst <<"Summa: "<< sum;
 	
-}
+};
+void matrix2d::MatrixOut2D(ofstream & ofst)
+{
+	MatrixOut(ofst);
+};
+

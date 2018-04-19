@@ -129,3 +129,7 @@ void matrixTRG::MatrixSum(ofstream &ofst)
 	ofst << "Summa: " << sum;
 
 };
+void matrixTRG::MatrixOutTrg(ofstream & ofst)
+{
+	MatrixOut(ofst);
+}

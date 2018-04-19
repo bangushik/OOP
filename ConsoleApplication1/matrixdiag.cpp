@@ -60,3 +60,8 @@ void matrixDiag::MatrixSum(ofstream &ofst)
 	ofst <<"Summa: "<< sum;
 
 }
+void matrixDiag::MatrixOutDiag(ofstream & ofst)
+{
+	matrixDiag::MatrixOut(ofst);
+};
+

@@ -25,8 +25,7 @@ public:
 	void ViewContSort(ofstream &ofst);
 	void ViewCont(ofstream &ofst);
 	void ContainerSort(int param);
-	
+	void ViewFiltred(ofstream &ofst, int met);
 
-	
 
 };
