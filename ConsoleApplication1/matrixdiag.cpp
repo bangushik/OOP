@@ -53,6 +53,7 @@ void matrixDiag::MatrixOut(ofstream &ofst)
 };
 void matrixDiag::MatrixSum(ofstream &ofst)
 {
+	sum = 0;
 	for (int i = 0; i < size; i++)
 	{
 		sum = sum + Diagmatr[i];

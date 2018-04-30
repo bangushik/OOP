@@ -15,8 +15,13 @@ class container
 {
 	node* head = NULL;
 	node* tail = NULL;
-	int size = 0;
+	//int size = 0;
 public:
+	node* Gethead()
+	{
+		return head;
+	}
+	int size = 0;
 	void In(ifstream &ifst);
 	void Out();
 	void Clear ();
