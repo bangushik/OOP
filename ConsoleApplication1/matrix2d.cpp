@@ -1,5 +1,4 @@
 #include "matrix2d.h"
-#include "..\UnitTest1\stdafx.h" 
 void matrix2d::In(ifstream &ifst)
 {
 	ifst >> strings;

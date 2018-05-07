@@ -9,6 +9,11 @@ matrix* matrix::inMatrix(ifstream &ifst)
 	int key;
 	int prt;
 	ifst >> key;
+	if (key != 1 && key != 2 && key != 3)
+	{
+		cout << "Incottect matrix type" << endl;
+		return 0;
+	}
 	if (key == 1)
 	{
 		matr = new matrix2d;
@@ -22,6 +27,10 @@ matrix* matrix::inMatrix(ifstream &ifst)
 		matr = new matrixTRG;
 	}
 	ifst >> prt;
+	if (prt != 1 && prt != 2 && prt != 3)
+	{
+		prt = 1;
+	}
 	if (prt == 1)
 	{
 		matr->printtype=LINE;
@@ -35,6 +44,11 @@ matrix* matrix::inMatrix(ifstream &ifst)
 		matr->printtype = STRING;
 	}
 	matr->In(ifst);
+	if (ifst.fail())
+	{
+		cout << "Input fail;" << endl;
+		return 0;
+	}
 	return matr;
 	
 };

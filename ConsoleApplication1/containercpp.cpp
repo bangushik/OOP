@@ -22,17 +22,26 @@
 };
 
 
-void container::In(ifstream &ifst)
+int container::In(ifstream &ifst)
 {
 	matrix* cur;
 	int count;
 	ifst >> count;
+	if (count <= 0)
+	{
+		cout << "Incorretc count of matrix" << endl;
+		return 0;
+	}
 	for (int i = 0; i < count; i++)
 	{
 		cur=matrix::inMatrix(ifst);
-		push(cur);
+		if (cur != 0)
+		{
+			push(cur);
+		}
+		else return 0;
 	}
-
+	return count;
 };
 
 void container::dell()
