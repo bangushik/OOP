@@ -1,6 +1,6 @@
-#include "matrix2d.h"
-void matrix2d::In(ifstream &ifst)
-{
+	#include "matrix2d.h"
+	void matrix2d::In(ifstream &ifst)
+	{
 	ifst >> strings;
 	ifst >> collums;
 	matr = new int*[strings];
@@ -13,10 +13,10 @@ void matrix2d::In(ifstream &ifst)
 		}
 
 	}
-};
+	};
 
-void matrix2d::MatrixOut(ofstream &ofst)
-{
+	void matrix2d::MatrixOut(ofstream &ofst)
+	{
 	if (printtype == STRING)
 	{
 		ofst << "Это двухмерная матрица: ";
@@ -55,9 +55,9 @@ void matrix2d::MatrixOut(ofstream &ofst)
 			}
 		}
 	}
-};
-void matrix2d::MatrixSum(ofstream &ofst)
-{
+	};
+	void matrix2d::MatrixSum(ofstream &ofst)
+	{
 	sum = 0;
 	for (int i = 0; i < strings; i++)
 	{
@@ -68,9 +68,9 @@ void matrix2d::MatrixSum(ofstream &ofst)
 	}
 	ofst <<"Summa: "<< sum;
 	
-};
-void matrix2d::MatrixOut2D(ofstream & ofst)
-{
+	};
+	void matrix2d::MatrixOut2D(ofstream & ofst)
+	{
 	MatrixOut(ofst);
-};
+	};
 

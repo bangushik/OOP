@@ -1,16 +1,16 @@
-#include "matrixdiag.h"
-void matrixDiag::In(ifstream &ifst)
-{
+	#include "matrixdiag.h"
+	void matrixDiag::In(ifstream &ifst)
+	{
 	ifst >> size;
-	Diagmatr = new int[size];
+	diagmatr = new int[size];
 	for (int i = 0; i < size; i++)
 	{
-		ifst >> Diagmatr[i];
+		ifst >> diagmatr[i];
 	}
-};
+	};
 
-void matrixDiag::MatrixOut(ofstream &ofst)
-{
+	void matrixDiag::MatrixOut(ofstream &ofst)
+	{	
 	if (printtype==STRING||printtype == STOLB)
 	{
 		ofst << "Это диагональная матрица: ";
@@ -21,7 +21,7 @@ void matrixDiag::MatrixOut(ofstream &ofst)
 			{
 				if (i == j)
 				{
-					ofst << Diagmatr[i] << " ";
+					ofst << diagmatr[i] << " ";
 				}
 				else
 					ofst << "0"<< " ";
@@ -41,7 +41,7 @@ void matrixDiag::MatrixOut(ofstream &ofst)
 			{
 				if (i == j)
 				{
-					ofst << Diagmatr[i] << " ";
+					ofst << diagmatr[i] << " ";
 				}
 				else
 					ofst << "0" << " ";
@@ -50,19 +50,19 @@ void matrixDiag::MatrixOut(ofstream &ofst)
 		ofst << endl;
 	}
 	ofst << endl;
-};
-void matrixDiag::MatrixSum(ofstream &ofst)
-{
+	};
+	void matrixDiag::MatrixSum(ofstream &ofst)
+	{
 	sum = 0;
 	for (int i = 0; i < size; i++)
 	{
-		sum = sum + Diagmatr[i];
+		sum = sum + diagmatr[i];
 	}
 	ofst <<"Summa: "<< sum;
 
-}
-void matrixDiag::MatrixOutDiag(ofstream & ofst)
-{
+	}
+	void matrixDiag::MatrixOutDiag(ofstream & ofst)
+	{
 	matrixDiag::MatrixOut(ofst);
-};
+	};
 

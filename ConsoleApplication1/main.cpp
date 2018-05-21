@@ -1,9 +1,9 @@
-#include "container.h"
-#include "Check.h"
-int main(int argc, char* argv[])
-{
+	#include "container.h"
+	#include "Check.h"
+	int main(int argc, char* argv[])
+	{
 	container c;
-	Check check;
+	check check;
 	int param =0;
 	int met =0;
 	int count;
@@ -14,7 +14,7 @@ int main(int argc, char* argv[])
 		cout << "incorrect command line!" << endl;
 		exit(1);
 	}
-	check.checkIn(ifst, ofst);
+	check.CheckIn(ifst, ofst);
 	while (!param)
 	{
 		cout << "Vvedite naprav sotrirovki 1-vozr 2-ubiv" << endl;

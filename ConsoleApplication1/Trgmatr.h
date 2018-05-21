@@ -1,14 +1,14 @@
+	#pragma once
+	#include "matrix.h"
 
-#include "matrix.h"
-
-class matrixTRG :public matrix
-{
+	class matrixTRG :public matrix
+	{
 	int size;
-	int* trg;
+	int* trgMatrix;
 public:
 	void In(ifstream &ifst);
 	void MatrixOut(ofstream &ofst);
 	void matrixTRG::MatrixSum(ofstream &ofst);
 	void MatrixOutTrg(ofstream &ofst);
-};
-#pragma once
+	};
+

@@ -1,14 +1,13 @@
+	#pragma once
+	#include "matrix.h"
 
-#include "matrix.h"
-
-class matrixDiag :public matrix
-{
+	class matrixDiag :public matrix
+	{
 	int size;
-	int* Diagmatr;
+	int* diagmatr;
 public:
 	void In(ifstream &ifst);
 	void MatrixOut(ofstream & ofst);
 	void MatrixSum(ofstream &ofstint);
 	void MatrixOutDiag(ofstream &ofst);
-};
-#pragma once
+	};

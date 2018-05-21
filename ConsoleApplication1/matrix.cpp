@@ -3,7 +3,7 @@
 #include "Trgmatr.h"
 #include "matrix.h"
 
-matrix* matrix::inMatrix(ifstream &ifst)
+matrix* matrix::InMatrix(ifstream &ifst)
 {
 	matrix* matr;
 	int key;
@@ -50,10 +50,9 @@ matrix* matrix::inMatrix(ifstream &ifst)
 		return 0;
 	}
 	return matr;
-	
-};
- bool matrix::Compare(matrix* m1, matrix* m2, int param)
-{
+	};
+	bool matrix::Compare(matrix* m1, matrix* m2, int param)
+	{
 	if (param == 1)
 	{
 		return (m1->sum > m2->sum);
@@ -62,16 +61,16 @@ matrix* matrix::inMatrix(ifstream &ifst)
 	{
 		return (m1->sum < m2->sum);
 	}
-}
-void matrix::MatrixOutDiag(ofstream & ofst)
-{
+	}
+	void matrix::MatrixOutDiag(ofstream & ofst)
+	{
 
-};
-void matrix::MatrixOut2D(ofstream & ofst)
-{
+	};
+	void matrix::MatrixOut2D(ofstream & ofst)
+	{
 
-};
-void matrix::MatrixOutTrg(ofstream &ofst)
-{
+	};
+	void matrix::MatrixOutTrg(ofstream &ofst)
+	{
 
-}
+	}

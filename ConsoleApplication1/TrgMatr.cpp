@@ -1,10 +1,9 @@
-#include "Trgmatr.h"
-void matrixTRG::In(ifstream &ifst)
-{
-	
+	#include "Trgmatr.h"
+	void matrixTRG::In(ifstream &ifst)
+	{
 	ifst >> size;
 	int koll = (size + 1)*(size / 2) + 10;
-	trg = new int[koll];
+	trgMatrix = new int[koll];
 	int k = 0;
 	int temp;
 	for (int i = 0; i < size; i++)
@@ -14,19 +13,15 @@ void matrixTRG::In(ifstream &ifst)
 			ifst >> temp;
 			if (j >= i)
 			{
-				trg[k] = temp;
+				trgMatrix[k] = temp;
 			}
 			k++;
 		}
-
 	}
-	
+	};
 
-};
-
-
-void matrixTRG::MatrixOut(ofstream &ofst)
-{
+	void matrixTRG::MatrixOut(ofstream &ofst)
+	{
 	if (printtype == STRING)
 	{
 		ofst << "Это треугольная матрица: ";
@@ -38,9 +33,7 @@ void matrixTRG::MatrixOut(ofstream &ofst)
 			{
 				if (j >= i)
 				{
-					ofst << trg[k] << " ";
-
-
+					ofst << trgMatrix[k] << " ";
 				}
 				else
 				{
@@ -63,9 +56,7 @@ void matrixTRG::MatrixOut(ofstream &ofst)
 				{
 					if (j < i)
 					{
-						ofst << trg[k] << " ";
-
-
+						ofst << trgMatrix[k] << " ";
 					}
 					else
 					{
@@ -88,9 +79,7 @@ void matrixTRG::MatrixOut(ofstream &ofst)
 				{
 					if (j >= i)
 					{
-						ofst << trg[k] << " ";
-
-
+						ofst << trgMatrix[k] << " ";
 					}
 					else
 					{
@@ -102,11 +91,9 @@ void matrixTRG::MatrixOut(ofstream &ofst)
 			}
 			ofst << endl;
 		}
-	
-
-};
-void matrixTRG::MatrixSum(ofstream &ofst)
-{
+	};
+	void matrixTRG::MatrixSum(ofstream &ofst)
+	{
 	sum = 0;
 	int k = 0;
 	for (int i = 0; i < size; i++)
@@ -115,21 +102,16 @@ void matrixTRG::MatrixSum(ofstream &ofst)
 		{
 			if (j >= i)
 			{
-				sum = sum + trg[k];
-
-
+				sum = sum + trgMatrix[k];
 			}
 			else
-			{
-				
-			}
+			{}
 			k++;
 		}
 	}
 	ofst << "Summa: " << sum;
-
-};
-void matrixTRG::MatrixOutTrg(ofstream & ofst)
-{
+	};
+	void matrixTRG::MatrixOutTrg(ofstream & ofst)
+	{
 	MatrixOut(ofst);
-}
+	}

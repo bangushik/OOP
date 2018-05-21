@@ -1,10 +1,7 @@
-#pragma once
-#include "container.h"
-class Check
-{
+	#pragma once
+	#include "container.h"
+	class check
+	{	
 public:
-	void checkIn(ifstream&ifst,ofstream&ofst);
-
-
-
-};
+	void CheckIn(ifstream&ifst,ofstream&ofst);
+	};

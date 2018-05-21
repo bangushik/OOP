@@ -6,17 +6,17 @@ using namespace std;
 
 #include "matrix.h"
 
-class node
-{
+	class node
+	{
 public:
 	node* next;
 	node*  prev;
 	matrix* info;
 	bool issorted;
-};
+	};
 
-class container
-{
+	class container
+	{
 	node* head = NULL;
 	node* tail = NULL;
 public:
@@ -28,12 +28,10 @@ public:
 	int In(ifstream &ifst);
 	void Out();
 	void Clear ();
-	void push(matrix* info);
-	void dell();
+	void Push(matrix* info);
+	void Dell();
 	void ViewContSort(ofstream &ofst);
 	void ViewCont(ofstream &ofst);
 	void ContainerSort(int param);
 	void ViewFiltred(ofstream &ofst, int met);
-
-
-};
+	};

@@ -1,6 +1,6 @@
-#include "Check.h"
-void Check::checkIn(ifstream&ifst, ofstream&ofst)
-{
+	#include "check.h"
+	void check::CheckIn(ifstream&ifst, ofstream&ofst)
+	{
 	if(!ifst)
 	{ 
 		cout << "Input file not opened;" << endl;
@@ -9,5 +9,4 @@ void Check::checkIn(ifstream&ifst, ofstream&ofst)
 	{
 		cout << "Output file not opened;" << endl;
 	}
-
-};
+	};
