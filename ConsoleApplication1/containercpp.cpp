@@ -92,17 +92,18 @@
 			return;
 		}
 		ofst << "В контйнере " << size << " эл. " << endl;
+		ofst << "-------------------------------" << endl;
 		while (n->next != head)
 		{
-			n->info->MatrixOut(ofst);
-			ofst << endl;
 			n->info->MatrixSum(ofst);
-			ofst << endl;
+			n->info->MatrixOut(ofst);
+			ofst << endl;;
 			n = n->next;
 		}	
+		n->info->MatrixSum(ofst);
 		n->info->MatrixOut(ofst);
 		ofst << endl;
-		n->info->MatrixSum(ofst);
+		
 		};
 		void container::ContainerSort(int param)
 		{
@@ -141,18 +142,14 @@
 		}
 		ofst << endl;
 		ofst << "В контейнере " << size << " эл-ов " << endl;
+		ofst << "--------------------------------" << endl;
 		while (n->next != head)
 		{
 			n->info->MatrixOut(ofst);
 			ofst << endl;
-			ofst << "Summa: " << n->info->sum;
-			ofst << endl;
 			n = n->next;
 		}
 		n->info->MatrixOut(ofst);
-		ofst << endl;
-		ofst << "Summa: " << n->info->sum;
-		ofst << endl;
 		}
 		void container::ViewFiltred(ofstream &ofst, int met)
 		{
@@ -162,14 +159,14 @@
 			ofst << "Контейнер пуст" << endl;
 			return;
 		}
+		ofst << endl;
 		ofst << "В контйнере " << size << " эл. " << endl;
+		ofst << "----------------------" << endl;
 		while (n->next != head)
 		{
 			if (met == 1)
 			{
 				n->info->MatrixOutDiag(ofst);
-				ofst << endl;
-				ofst << "Summa: " << n->info->sum;
 				ofst << endl;
 				n = n->next;
 			}
@@ -177,38 +174,29 @@
 			{
 				n->info->MatrixOut2D(ofst);
 				ofst << endl;
-				ofst << "Summa: " << n->info->sum;
-				ofst << endl;
 				n = n->next;
 			}
 			if (met == 3)
 			{
 				n->info->MatrixOutTrg(ofst);
 				ofst << endl;
-				ofst << "Summa: " << n->info->sum;
-				ofst << endl;
 				n = n->next;
 			}
 		}
 		if (met == 1)
-			n->info->MatrixOutDiag(ofst);
+			
 		{
-			ofst << endl;
-			ofst << "Summa: " << n->info->sum;
+			n->info->MatrixOutDiag(ofst);
 			ofst << endl;
 		}
 		if (met == 2)
 		{
 			n->info->MatrixOut2D(ofst);
 			ofst << endl;
-			ofst << "Summa: " << n->info->sum;
-			ofst << endl;
 		}
 		if (met == 3)
 		{
 		n->info->MatrixOutTrg(ofst);
-		ofst << endl;
-		ofst << "Summa: " << n->info->sum;
 		ofst << endl;
 		}
 		}

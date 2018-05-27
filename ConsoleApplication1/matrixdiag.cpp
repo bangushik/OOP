@@ -29,10 +29,11 @@
 			ofst << endl;
 			
 		}
-		ofst << endl;
+		
 	}
 	if (printtype == LINE)
 	{
+		
 		ofst << "Это диагональная матрица: ";
 		ofst << size << endl;
 		for (int i = 0; i < size; i++)
@@ -49,7 +50,8 @@
 		}
 		ofst << endl;
 	}
-	ofst << endl;
+	ofst << "Summa " << sum << endl;
+	
 	};
 	void matrixDiag::MatrixSum(ofstream &ofst)
 	{
@@ -58,7 +60,7 @@
 	{
 		sum = sum + diagmatr[i];
 	}
-	ofst <<"Summa: "<< sum;
+	
 
 	}
 	void matrixDiag::MatrixOutDiag(ofstream & ofst)

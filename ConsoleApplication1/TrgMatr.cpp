@@ -68,7 +68,7 @@
 			}
 			ofst << endl;
 		}
-		if (printtype == STRING)
+		if (printtype == LINE)
 		{
 			ofst << "Это треугольная матрица: ";
 			ofst << "размер " << size << " " << "X " << size << endl;
@@ -91,6 +91,7 @@
 			}
 			ofst << endl;
 		}
+		ofst << "Summa " << sum << endl;
 	};
 	void matrixTRG::MatrixSum(ofstream &ofst)
 	{
@@ -109,7 +110,6 @@
 			k++;
 		}
 	}
-	ofst << "Summa: " << sum;
 	};
 	void matrixTRG::MatrixOutTrg(ofstream & ofst)
 	{

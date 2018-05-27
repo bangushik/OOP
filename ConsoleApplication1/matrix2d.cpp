@@ -55,6 +55,7 @@
 			}
 		}
 	}
+	ofst <<"Summa "<< sum << endl;
 	};
 	void matrix2d::MatrixSum(ofstream &ofst)
 	{
@@ -66,7 +67,7 @@
 			sum = sum + matr[i][j];
 		}
 	}
-	ofst <<"Summa: "<< sum;
+	
 	
 	};
 	void matrix2d::MatrixOut2D(ofstream & ofst)
